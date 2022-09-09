@@ -22,6 +22,7 @@ public class AmountSortingStepDefinitions {
     @When("amount is clicked it is sorted")
     public void amount_is_clicked_it_is_sorted() throws InterruptedException {
         driver.findElement(By.id("amount")).click();
+        System.out.println("user clicks amount");
         Thread.sleep(2000);
         driver.quit();
     }

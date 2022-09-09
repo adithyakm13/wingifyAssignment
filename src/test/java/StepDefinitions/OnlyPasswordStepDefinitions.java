@@ -16,6 +16,7 @@ public class OnlyPasswordStepDefinitions {
         sf = new SuccessfulLoginStepDefinitions();
         driver = sf.getDriver();
         driver.findElement(By.id("password")).sendKeys("password");
+        System.out.println("User enters only password");
     }
     @Then("error message2 {string} should be displayed")
     public void error_message2_should_be_displayed(String string) {

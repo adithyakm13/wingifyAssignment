@@ -31,3 +31,15 @@ Feature: Feature to test the login functionality
     Given browser is open
     And user is logged in
     When amount is clicked it is sorted
+
+  Scenario: validate the social media login functionality
+    Scenario Outline: check the login using twitter facebook and linkedin
+      Given browser is open
+      And user is on login page
+      When user clicks on <socialmedia>
+      Then user should be taken to <socialmedia> page
+      Examples:
+        | socialmedia |
+        | twitter     |
+        | facebook    |
+        | linkedin    |

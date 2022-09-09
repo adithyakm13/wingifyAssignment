@@ -18,6 +18,7 @@ public class OnlyUsernameStepDefinitions {
         sf = new SuccessfulLoginStepDefinitions();
         driver = sf.getDriver();
         driver.findElement(By.id("username")).sendKeys("username");
+        System.out.println("user enters only username");
     }
 
     @Then("error message {string} should be displayed")

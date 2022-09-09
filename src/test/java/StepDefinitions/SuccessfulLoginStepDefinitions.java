@@ -28,7 +28,7 @@ public class SuccessfulLoginStepDefinitions {
         driver.manage().window().maximize();
         try{
             driver.getWindowHandle();
-            System.out.println("Step 1 - Browser is launched");
+            System.out.println("Browser is launched");
         }catch (Exception e){
             Assert.fail("browser not open");
         }
@@ -37,15 +37,19 @@ public class SuccessfulLoginStepDefinitions {
     @Given("user is on login page")
     public void user_is_on_login_page() {
         driver.get("https://sakshingp.github.io/assignment/login.html");
+        System.out.println("User is on login page");
     }
     @When("user enters username and password")
     public void user_enters_username_and_password() {
         driver.findElement(By.id("username")).sendKeys("username");
+        System.out.println("User enters username");
         driver.findElement(By.id("password")).sendKeys("password");
+        System.out.println("User enters password");
     }
     @When("clicks login")
     public void clicks_login() {
         driver.findElement(By.id("log-in")).click();
+        System.out.println("User clicks login");
     }
     @Then("user should be logged in")
     public void user_should_be_logged_in() {

@@ -15,6 +15,7 @@ public class NoUsernameAndPasswordStepDefinitions {
     public void user_enters_only_nothing() {
         sf = new SuccessfulLoginStepDefinitions();
         driver = sf.getDriver();
+        System.out.println("User enters nothing");
 
     }
     @Then("error message3 {string} should be displayed")
